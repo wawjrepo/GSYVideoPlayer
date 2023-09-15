@@ -4,6 +4,22 @@ buildscript {
     repositories {
         google()
         gradlePluginPortal()
+        maven {
+            credentials {
+                username MAVEN_USER
+                password MAVEN_PASSWORD
+            }
+            url MAVEN_RELEASE_URL
+            allowInsecureProtocol true
+        }
+        maven {
+            credentials {
+                username MAVEN_USER
+                password MAVEN_PASSWORD
+            }
+            url MAVEN_SNAPSHOT_URL
+            allowInsecureProtocol true
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.0.1'
@@ -16,6 +32,22 @@ allprojects {
         mavenCentral()
         maven { url "https://maven.aliyun.com/repository/public" }
         maven { url "https://jitpack.io" }
+        maven {
+            credentials {
+                username MAVEN_USER
+                password MAVEN_PASSWORD
+            }
+            url MAVEN_RELEASE_URL
+            allowInsecureProtocol true
+        }
+        maven {
+            credentials {
+                username MAVEN_USER
+                password MAVEN_PASSWORD
+            }
+            url MAVEN_SNAPSHOT_URL
+            allowInsecureProtocol true
+        }
     }
 }
 

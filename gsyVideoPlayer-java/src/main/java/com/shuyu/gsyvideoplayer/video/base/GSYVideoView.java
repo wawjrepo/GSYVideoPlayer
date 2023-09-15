@@ -360,7 +360,7 @@ public abstract class GSYVideoView extends GSYTextureRenderView implements GSYMe
                     onGankAudio();
                     break;
                 case AudioManager.AUDIOFOCUS_LOSS:
-                    onLossAudio();
+//                    onLossAudio();
                     break;
                 case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
                     onLossTransientAudio();

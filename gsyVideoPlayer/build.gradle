@@ -1,8 +1,14 @@
 apply from: "$rootDir/gradle/lib.gradle"
 
-apply from: "$rootDir/gradle/publish.gradle"
+//apply from: "$rootDir/gradle/publish.gradle"
+
+apply from: '../maven_publish_aar.gradle'
+version = '1.0.0'
+artifact = "gsy-video_player"
+
 android {
     namespace 'com.shuyu.gsyvideoplayer.lib'
+
 }
 
 dependencies {
